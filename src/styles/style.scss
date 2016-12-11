@@ -20,20 +20,22 @@
 //pages
 @import 'pages/**/*';
 .device {
+    @include breakpoint(max-width $tiny) {
+        display: none;
+    }
     // overflow: hidden;
     margin: 0 auto;
     position: relative;
-    .device-popup{
-        
-        &.active{
+    .device-popup {
+        &.active {
             display: block;
         }
-        .device-popup-icon{
+        .device-popup-icon {
             position: absolute;
-            top:0px;
-            left:0px;
-            right:0px;
-            bottom:0px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
         }
         display: none;
         z-index: 20;
@@ -80,7 +82,7 @@
         position: absolute;
         width: 100%;
         z-index: 10;
-         @include breakpoint($tiny) {
+        @include breakpoint($tiny) {
             bottom: 63px;
         }
         @include breakpoint($small) {
@@ -199,7 +201,6 @@
     height:1000px;
     .device-app {
         .device-app-name {
-            
             color: white;
             font-size: 0.8em;
             @include breakpoint($tiny) {
@@ -209,8 +210,8 @@
                 font-size: 0.6em;
             }
             @include breakpoint($medium) {
-                 margin-top: 4px;
-                 font-size: 0.8em;
+                margin-top: 4px;
+                font-size: 0.8em;
             }
         }
         .device-app-icon {
@@ -231,7 +232,6 @@
             }
         }
         @include breakpoint($tiny) {
-
             width: 25%;
             margin-bottom: 35px;
         }
@@ -272,10 +272,11 @@ main {
     margin: 150px auto;
     text-align: center;
 }
-.drag-element{
+
+.drag-element {
     position: absolute;
-    width:85px;
-    height:85px;
+    width: 85px;
+    height: 85px;
     background: black;
-    top:-1000px;
+    top: -1000px;
 }
