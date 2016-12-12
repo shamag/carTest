@@ -24,9 +24,9 @@ function getName(name) {
 for (var i = 0; i < Math.ceil(iconsList.length / 20); i++) {
     var el = document.createElement('div');
     el.className = 'device-screen';
-    screensEl.append(el);
+    screensEl.appendChild(el);
     var pagerLi = document.createElement('li');
-    pager.append(pagerLi);
+    pager.appendChild(pagerLi);
 };
 pager.querySelector('li').className = 'active';
 
@@ -34,7 +34,7 @@ menuList.forEach(function (el, i) {
     var newEl = document.createElement('div');
     newEl.className = 'device-app';
     newEl.innerHTML = '<div class="device-app-icon"><img src="img/icons/' + menuList[i] + '" alt=""></div>\n                       <div class="device-app-name">' + getName(menuList[i]) + '</div>';
-    menu.append(newEl);
+    menu.appendChild(newEl);
 });
 
 iconsList.forEach(function (el, i) {
@@ -42,7 +42,7 @@ iconsList.forEach(function (el, i) {
     var newEl = document.createElement('div');
     newEl.className = 'device-app';
     newEl.innerHTML = '<div class="device-app-icon"><img src="img/icons/' + iconsList[i] + '" alt=""></div>\n                       <div class="device-app-name">' + getName(iconsList[i]) + '</div>';
-    curScreen.append(newEl);
+    curScreen.appendChild(newEl);
 });
 var pagerSelector = '.device-pager>ul>li';
 
@@ -80,7 +80,7 @@ appList.forEach(function (el) {
         dragName = el.querySelector('.device-app-name').innerHTML;
         dragImg = el.querySelector('img').getAttribute('src');
         dragEl.style.background = 'url(' + dragImg + ') no-repeat center';
-        document.querySelector('body').append(dragEl);
+        document.querySelector('body').appendChild(dragEl);
         e.preventDefault();
     });
 });
