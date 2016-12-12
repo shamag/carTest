@@ -59,7 +59,7 @@ const pagerSelector = '.device-pager>ul>li';
 Array.prototype.forEach.call(menu.querySelectorAll('.device-app-icon'), (el) => {
         el.addEventListener('click', (e) => {
             let curImg = el.querySelector('img').getAttribute('src');
-            popup.querySelector('.device-popup-icon').style.background = `url(../${curImg}) no-repeat center`;
+            popup.querySelector('.device-popup-icon').style.background = `url(${curImg}) no-repeat center`;
             popup.className = popup.className + ' active';
         })
     })
@@ -93,7 +93,7 @@ appList.forEach((el) => {
         dragEl.className = 'drag-element';
         dragName = el.querySelector('.device-app-name').innerHTML;
         dragImg = el.querySelector('img').getAttribute('src');
-        dragEl.style.background = `url(../${dragImg}) no-repeat center`
+        dragEl.style.background = `url(${dragImg}) no-repeat center`
         document.querySelector('body').append(dragEl);
         e.preventDefault();
     })
