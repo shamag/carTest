@@ -89,6 +89,7 @@ appList.forEach((el) => {
     el.querySelector('.device-app-icon').addEventListener('mousedown', (e) => {
         if (!detectLeftButton(e)) return;
         dragSrc = el;
+        document.querySelector('body').style.cursor = 'move';
         dragEl = document.createElement('div');
         dragEl.className = 'drag-element';
         dragName = el.querySelector('.device-app-name').innerHTML;
@@ -100,6 +101,7 @@ appList.forEach((el) => {
 })
 window.addEventListener('mouseup', (e) => {
     var parent = e.target.parentNode;
+    document.querySelector('body').style.cursor = 'inherit';
     if (parent.className === 'device-app-icon') {
         let tmpImg = e.target.getAttribute('src');
         let tmpName = parent.parentNode.querySelector('.device-app-name');
