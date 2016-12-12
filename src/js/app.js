@@ -23,7 +23,7 @@ function detectLeftButton(evt) {
 }
 // get name from filename
 function getName(name) {
-    return name.split('icon-')[1].split('.png')[0].split('_').join()
+    return name.split('icon-')[1].split('.png')[0].split('_').join();
 }
 // create screens 
 for (let i = 0; i < Math.ceil(iconsList.length / 20); i++) {
@@ -57,14 +57,14 @@ iconsList.forEach((el, i) => {
 const pagerSelector = '.device-pager>ul>li';
 //  set popup window on menu clicks
 Array.prototype.forEach.call(menu.querySelectorAll('.device-app-icon'), (el) => {
-        el.addEventListener('click', (e) => {
+        el.addEventListener('click', () => {
             let curImg = el.querySelector('img').getAttribute('src');
             popup.querySelector('.device-popup-icon').style.background = `url(${curImg}) no-repeat center`;
             popup.className = popup.className + ' active';
         })
     })
     // hide popup on click
-popup.addEventListener('click', (e) => {
+popup.addEventListener('click', () => {
         popup.className = 'device-popup';
     })
     // make arrays
