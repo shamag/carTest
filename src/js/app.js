@@ -29,9 +29,9 @@ function getName(name) {
 for (let i = 0; i < Math.ceil(iconsList.length / 20); i++) {
     let el = document.createElement('div');
     el.className = 'device-screen';
-    screensEl.append(el);
+    screensEl.appendChild(el);
     let pagerLi = document.createElement('li');
-    pager.append(pagerLi);
+    pager.appendChild(pagerLi);
 };
 // set active pager li
 pager.querySelector('li').className = 'active';
@@ -42,7 +42,7 @@ menuList.forEach((el, i) => {
     newEl.className = 'device-app';
     newEl.innerHTML = `<div class="device-app-icon"><img src="img/icons/${menuList[i]}" alt=""></div>
                        <div class="device-app-name">${getName(menuList[i])}</div>`;
-    menu.append(newEl);
+    menu.appendChild(newEl);
 });
 
 //create apps
@@ -52,7 +52,7 @@ iconsList.forEach((el, i) => {
     newEl.className = 'device-app';
     newEl.innerHTML = `<div class="device-app-icon"><img src="img/icons/${iconsList[i]}" alt=""></div>
                        <div class="device-app-name">${getName(iconsList[i])}</div>`;
-    curScreen.append(newEl);
+    curScreen.appendChild(newEl);
 })
 const pagerSelector = '.device-pager>ul>li';
 //  set popup window on menu clicks
@@ -94,7 +94,7 @@ appList.forEach((el) => {
         dragName = el.querySelector('.device-app-name').innerHTML;
         dragImg = el.querySelector('img').getAttribute('src');
         dragEl.style.background = `url(${dragImg}) no-repeat center`
-        document.querySelector('body').append(dragEl);
+        document.querySelector('body').appendChild(dragEl);
         e.preventDefault();
     })
 })
