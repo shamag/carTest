@@ -121,7 +121,7 @@
             padding: 3px;
         }
         @include breakpoint($medium) {
-            padding-top: 55px;
+            padding-top: 25px;
             padding-left: 25px;
             padding-right: 25px;
         }
@@ -163,10 +163,10 @@
         @include breakpoint($large) {
             content: '';
             position: absolute;
-            left: -232px;
-            right: -242px;
-            top: -242px;
-            bottom: -242px;
+            left: -85px;
+            right: -98px;
+            top: -78px;
+            bottom: -77px;
             background: url('../img/ipad-mini-horizontal.png') no-repeat center;
             background-size: contain;
             z-index: -1;
@@ -194,8 +194,8 @@
         background: url('../img/background.jpg');
         //@include breakpoint($large) {
         background-size: cover;
-        height: 768px;
-        width: 1024px;
+        height: 600px;
+        width: 800px;
     }
     width:100%;
     height:1000px;
@@ -228,7 +228,7 @@
                 max-width: 28px;
             }
             @include breakpoint($medium) {
-                max-width: 85px;
+                max-width: 75px;
             }
         }
         @include breakpoint($tiny) {
@@ -240,7 +240,7 @@
             margin-bottom: 2px;
         }
         @include breakpoint($medium) {
-            margin-bottom: 40px;
+            margin-bottom: 15px;
             min-width: 25%;
         }
         @include breakpoint($large) {
